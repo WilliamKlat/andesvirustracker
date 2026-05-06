@@ -10,7 +10,7 @@ const TRANSLATIONS = {
     nav_report: "Report a Case",
     // Hero
     hero_status: "LIVE OUTBREAK MONITORING",
-    hero_title_1: "Hantavirus",
+    hero_title_1: "Andes Virus",
     hero_title_2: "Outbreak Tracker",
     hero_subtitle: "Tracking the active 2026 Andes hantavirus cluster. Numbers verified from WHO Disease Outbreak News, Africa CDC, and major news agencies.",
     // Stats
@@ -118,7 +118,7 @@ const TRANSLATIONS = {
     nav_variants: "Variantes",
     nav_report: "Reportar Caso",
     hero_status: "MONITOREO DE BROTE EN VIVO",
-    hero_title_1: "Hantavirus",
+    hero_title_1: "Virus Andes",
     hero_title_2: "Rastreador de Brote",
     hero_subtitle: "Seguimiento del brote activo de hantavirus Andes 2026. Cifras verificadas de la OMS, Africa CDC y principales agencias de noticias.",
     stat_confirmed: "Casos Confirmados",
@@ -218,7 +218,7 @@ const TRANSLATIONS = {
     nav_variants: "Variantes",
     nav_report: "Relatar Caso",
     hero_status: "MONITORAMENTO DE SURTO AO VIVO",
-    hero_title_1: "Hantavírus",
+    hero_title_1: "Vírus Andes",
     hero_title_2: "Rastreador de Surto",
     hero_subtitle: "Rastreamento do surto ativo de hantavírus Andes 2026. Números verificados pela OMS, Africa CDC e principais agências de notícias.",
     stat_confirmed: "Casos Confirmados",

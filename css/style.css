@@ -431,7 +431,10 @@ body {
   .hero-particle-img { animation: none; }
 }
 
-/* Bouncing state — particle leaves flow and JS controls position via transform */
+/* Bouncing state — particle leaves flow and JS controls position via transform.
+   We use ONLY in-plane rotation (rotateZ) so the rendered shape never tilts
+   into edge-view — the source image is already a 3D-rendered sphere, rotating
+   it in-plane keeps the spherical look at every angle. */
 .hero-particle.is-bouncing {
   position: fixed;
   inset: auto;
@@ -440,7 +443,6 @@ body {
   width: var(--bounce-size, 360px);
   height: var(--bounce-size, 360px);
   z-index: 9999;
-  transform-style: preserve-3d;
 }
 
 .hero-particle.is-bouncing .hero-particle-img {

@@ -34,54 +34,57 @@
   </g>
 
   <!-- ===== WORLD HEAT MAP =====
-       Map fills the central area between the brand text (top) and the legend
-       (bottom). Bottom-left of the banner stays clear for X profile-picture
-       overlap. Continent paths are drawn directly in viewport coordinates
-       (no group transform) so the heat-dot placements are obvious to read.
-       Coordinate system: x ∈ [80, 1040], y ∈ [110, 440]. -->
-  <g stroke="#14110F" stroke-width="1.4" fill="none"
+       Continents drawn with smooth Bezier curves so they read as continents
+       not polygonal blobs. Map area: x ∈ [80, 1050], y ∈ [110, 430]. -->
+  <g stroke="#14110F" stroke-width="1.3" fill="none"
      stroke-linejoin="round" stroke-linecap="round">
 
     <!-- North America -->
-    <path d="M 110 165 L 145 138 L 215 130 L 280 145 L 320 175 L 305 215 L 280 235 L 255 230 L 235 250 L 200 248 L 175 230 L 150 218 L 130 200 Z"/>
+    <path d="M 110 170 Q 105 140 145 135 Q 200 125 270 138 Q 318 148 322 180
+             Q 320 210 300 226 Q 270 235 245 232 L 232 252
+             Q 195 258 168 240 Q 130 226 113 200 Q 100 185 110 170 Z"/>
     <!-- Greenland -->
-    <path d="M 345 130 L 380 125 L 395 145 L 380 168 L 358 168 L 348 152 Z"/>
+    <path d="M 350 130 Q 380 122 398 140 Q 405 162 385 175 Q 360 175 350 158 Q 343 142 350 130 Z"/>
     <!-- Central America -->
-    <path d="M 280 240 L 300 260 L 318 282 L 305 295 L 285 280 L 270 258 Z"/>
+    <path d="M 270 240 Q 285 256 300 270 Q 318 286 308 296 Q 290 290 275 272 Q 262 256 270 240 Z"/>
     <!-- South America -->
-    <path d="M 308 290 L 340 295 L 360 320 L 365 360 L 358 400 L 338 430 L 322 432 L 308 410 L 300 370 L 295 330 Z"/>
+    <path d="M 310 295 Q 348 295 365 322 Q 376 360 360 402 Q 340 430 325 430
+             Q 305 408 300 378 Q 296 340 305 312 Q 308 300 310 295 Z"/>
     <!-- UK / Ireland -->
-    <path d="M 540 162 L 555 160 L 562 175 L 552 188 L 540 184 L 535 172 Z"/>
+    <path d="M 538 162 Q 558 158 562 178 Q 555 192 542 188 Q 532 178 538 162 Z"/>
     <!-- Europe (mainland) -->
-    <path d="M 565 160 L 615 155 L 660 162 L 685 178 L 670 198 L 625 200 L 590 195 L 568 182 Z"/>
+    <path d="M 568 162 Q 620 156 668 165 Q 692 178 678 198 Q 632 204 588 200 Q 562 188 568 162 Z"/>
     <!-- Iberia -->
-    <path d="M 540 200 L 568 198 L 580 215 L 568 230 L 545 226 L 538 210 Z"/>
+    <path d="M 540 200 Q 568 200 582 218 Q 575 232 552 230 Q 535 218 540 200 Z"/>
     <!-- North Africa -->
-    <path d="M 558 232 L 620 220 L 670 235 L 700 268 L 695 305 L 660 318 L 615 312 L 580 290 L 562 262 Z"/>
+    <path d="M 555 232 Q 622 222 678 235 Q 705 250 700 285 Q 690 312 660 318
+             Q 615 318 580 300 Q 558 280 555 252 Q 552 240 555 232 Z"/>
     <!-- Sub-Saharan / Southern Africa -->
-    <path d="M 615 318 L 665 318 L 690 340 L 695 380 L 678 405 L 645 412 L 620 400 L 605 370 L 605 340 Z"/>
+    <path d="M 610 320 Q 660 320 690 342 Q 700 378 680 408 Q 650 418 620 405
+             Q 600 380 600 348 Q 602 330 610 320 Z"/>
     <!-- Madagascar -->
-    <path d="M 720 380 L 735 378 L 740 400 L 728 415 L 718 405 L 716 388 Z"/>
+    <path d="M 720 380 Q 738 378 742 398 Q 735 418 722 412 Q 712 398 720 380 Z"/>
     <!-- Russia / Northern Asia -->
-    <path d="M 685 145 L 760 138 L 850 142 L 920 150 L 970 160 L 990 175 L 970 195 L 910 198 L 840 195 L 770 188 L 715 178 L 692 165 Z"/>
-    <!-- Middle East -->
-    <path d="M 695 200 L 735 198 L 765 215 L 755 240 L 720 248 L 695 232 Z"/>
+    <path d="M 690 148 Q 770 138 860 142 Q 940 148 985 162 Q 1005 178 985 196
+             Q 925 202 855 198 Q 780 192 720 180 Q 690 168 690 148 Z"/>
+    <!-- Middle East / Arabia -->
+    <path d="M 695 202 Q 735 200 762 218 Q 760 245 728 250 Q 700 240 695 220 Q 690 208 695 202 Z"/>
     <!-- China / East Asia -->
-    <path d="M 850 200 L 920 200 L 960 218 L 950 248 L 905 255 L 855 248 L 838 225 Z"/>
+    <path d="M 850 200 Q 905 200 950 218 Q 960 245 925 258 Q 875 258 848 240 Q 835 220 850 200 Z"/>
     <!-- Indian subcontinent -->
-    <path d="M 805 235 L 835 232 L 855 250 L 845 285 L 818 290 L 798 270 Z"/>
+    <path d="M 800 240 Q 830 238 852 252 Q 858 285 832 295 Q 808 290 798 268 Q 793 250 800 240 Z"/>
     <!-- Southeast Asia -->
-    <path d="M 880 268 L 925 268 L 945 285 L 935 305 L 905 308 L 882 290 Z"/>
+    <path d="M 880 268 Q 920 268 945 286 Q 942 308 912 312 Q 882 305 875 288 Q 872 275 880 268 Z"/>
     <!-- Indonesia -->
-    <path d="M 925 320 L 960 318 L 985 328 L 992 340 L 970 350 L 940 348 L 922 335 Z"/>
+    <path d="M 925 322 Q 962 318 990 332 Q 996 348 968 352 Q 938 350 920 340 Q 916 328 925 322 Z"/>
     <!-- Philippines -->
-    <path d="M 985 290 L 1000 285 L 1010 305 L 1000 320 L 988 318 L 982 302 Z"/>
+    <path d="M 988 290 Q 1005 285 1010 305 Q 1003 322 990 318 Q 982 308 988 290 Z"/>
     <!-- Japan -->
-    <path d="M 992 215 L 1004 215 L 1010 230 L 1006 248 L 996 252 L 988 240 L 988 222 Z"/>
+    <path d="M 992 218 Q 1006 218 1011 235 Q 1006 252 996 252 Q 985 240 988 224 Q 988 220 992 218 Z"/>
     <!-- Australia -->
-    <path d="M 920 365 L 970 360 L 1010 375 L 1020 395 L 998 415 L 950 415 L 920 405 L 912 385 Z"/>
+    <path d="M 918 368 Q 968 362 1012 378 Q 1020 400 992 418 Q 942 418 918 408 Q 905 388 918 368 Z"/>
     <!-- New Zealand -->
-    <path d="M 1030 405 L 1042 408 L 1042 425 L 1030 432 L 1024 422 L 1024 412 Z"/>
+    <path d="M 1028 408 Q 1042 408 1044 425 Q 1035 435 1026 428 Q 1022 418 1028 408 Z"/>
   </g>
 
   <!-- Equator hairline (decorative, editorial) -->
@@ -142,19 +145,21 @@
     <circle r="3.5" fill="#D97706"/>
   </g>
 
-  <!-- ===== LEGEND ===== -->
-  <g transform="translate(160, 462)" font-family="'Inter','Helvetica Neue',Arial,sans-serif">
+  <!-- ===== LEGEND =====
+       Positioned to clear the X profile-picture overlap zone (bottom-left
+       roughly x:0-210, y:360-500). Sits in the centre, below the map. -->
+  <g transform="translate(440, 470)" font-family="'Inter','Helvetica Neue',Arial,sans-serif">
     <g>
       <circle cx="6" cy="0" r="5" fill="#B91C1C"/>
-      <text x="20" y="4" font-size="11" font-weight="600" fill="#4A4641" letter-spacing="1.2">ACTIVE</text>
+      <text x="20" y="4" font-size="11" font-weight="700" fill="#4A4641" letter-spacing="1.5">ACTIVE</text>
     </g>
-    <g transform="translate(95, 0)">
+    <g transform="translate(105, 0)">
       <circle cx="6" cy="0" r="5" fill="#EA580C"/>
-      <text x="20" y="4" font-size="11" font-weight="600" fill="#4A4641" letter-spacing="1.2">CONTAINED</text>
+      <text x="20" y="4" font-size="11" font-weight="700" fill="#4A4641" letter-spacing="1.5">CONTAINED</text>
     </g>
-    <g transform="translate(220, 0)">
+    <g transform="translate(245, 0)">
       <circle cx="6" cy="0" r="5" fill="#D97706"/>
-      <text x="20" y="4" font-size="11" font-weight="600" fill="#4A4641" letter-spacing="1.2">SURVEILLANCE</text>
+      <text x="20" y="4" font-size="11" font-weight="700" fill="#4A4641" letter-spacing="1.5">SURVEILLANCE</text>
     </g>
   </g>
 
